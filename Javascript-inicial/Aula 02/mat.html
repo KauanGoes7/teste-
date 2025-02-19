@@ -1,75 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matematica</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-    </style>
-    
+    <title>Matemática</title>
+    <link rel="stylesheet" href="mat.css">
 </head>
 <body>
-    <h1>Contas Matematicas</h1>
+    <h1>Contas Matemáticas</h1>
+    <main>
+        <div class="row">
+            <section class="left">
+                <h2>Soma</h2>
+                <label for="n1">Primeiro número:</label>
+                <input type="number" id="n1" placeholder="Digite o Primeiro Número">
+                <label for="n2">Segundo número:</label>
+                <input type="number" id="n2" placeholder="Digite o Segundo Número">
+                <button onclick="somar()">SOMAR</button>
+                <p>Resultado: <span id="res-soma"></span></p>
+            </section>
 
-    <h2>soma</h2>
-    <label for="n1">Primeiro numero</label>
-    <input type="text" id="n1"><br>
+            <section class="right">
+                <h2>Subtração</h2>
+                <label for="n3">Primeiro número:</label>
+                <input type="number" id="n3">
+                <label for="n4">Segundo número:</label>
+                <input type="number" id="n4">
+                <button onclick="subtrair()">SUBTRAIR</button>
+                <p>Resultado: <span id="res-subtracao"></span></p>
+            </section>
+        </div>
+        
+        <div class="row">
+            <section class="left">
+                <h2>Multiplicação</h2>
+                <label for="n5">Primeiro número:</label>
+                <input type="number" id="n5">
+                <label for="n6">Segundo número:</label>
+                <input type="number" id="n6">
+                <button onclick="multiplicar()">MULTIPLICAR</button>
+                <p>Resultado: <span id="res-multiplicacao"></span></p>
+            </section>
 
-    <label for="n1">Segundo numero</label>
-    <input type="text" id="n2"><br>
+            <section class="right">
+                <h2>Divisão</h2>
+                <label for="n7">Primeiro número:</label>
+                <input type="number" id="n7">
+                <label for="n8">Segundo número:</label>
+                <input type="number" id="n8">
+                <button onclick="dividir()">DIVIDIR</button>
+                <p>Resultado: <span id="res-divisao"></span></p>
+            </section>
+        </div>
 
-    <button onclick="soma()">Somar</button><br><br>
-    <p> Resultado: <span id="Resposta"></span></p><br><br><br>
+        <section>
+            <h2>Média</h2>
+            <input type="number" id="m1" placeholder="Digite a Primeira Nota">
+            <input type="number" id="m2" placeholder="Digite a Segunda Nota">
+            <input type="number" id="m3" placeholder="Digite a Terceira Nota">
+            <input type="number" id="m4" placeholder="Digite a Quarta Nota">
+            <input type="number" id="m5" placeholder="Digite a Quinta Nota">
+            <button onclick="media()">CALCULAR</button>
+            <p>Resultado: <span id="respMedia"></span></p>
+            <p id="msg"></p>
+        </section>
 
-    <h2>subtração</h2>
-    <label for="n1">Primeiro numero</label>
-    <input type="text" id="n3"><br>
+        <section>
+         <h2>IMC</h2>   
+        <input type="number" id="p1" placeholder="Digite o seu peso">
+        <input type="number" id="a1" placeholder="Digite o seu altura">
+        <p>Resultado: <span id="resIMC"></span></p>
+        <p id="mensagem"></p>
+    </section>
+    </main>
 
-    
-
-    <label for="n1">Segundo numero</label>
-    <input type="text" id="n4"><br>
-
-
-
-    <h2>multiplicação</h2>
-    <label for="n1">Primeiro numero</label>
-    <input type="text" id="n5"><br>
-
-    <label for="n1">Segundo numero</label>
-    <input type="text" id="n6"><br>
-
-    <h2>divisão</h2>
-    <label for="n1">Primeiro numero</label>
-    <input type="text" id="n7"><br>
-
-    <label for="n1">Segundo numero</label>
-    <input type="text" id="n8"><br>
-
-
-
-
-    <section><h2>soma</h2></section>
-    <section><h2>subtração</h2></section>
-    <section><h2>multiplicação</h2></section>
-    <section><h2>divisão</h2></section>
-    <script>
-        function soma(){
-            var numero1 = document.getElementById("n1").valueAsNumber
-            var numero2 = document.getElementById("n2").valueAsNumber
-            var res = document.getElementById(" Resposta ")
-            res.innerHTML = numero1 + numero2
-            return res
-        }
-
-
-    </script>
-
+    <script src="mat.js"></script>
 </body>
 </html>
