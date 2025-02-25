@@ -1,0 +1,52 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 56px; /* Ajuste para o navbar fixo */
+  }
+  
+  /* Banner */
+  .banner {
+    background-image: url('https://via.placeholder.com/1920x600?text=FC+Barcelona');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  /* Botão de rolagem */
+  .scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004D98;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background-color: #A50044;
+  }
+  
+  /* Cards */
+  .card {
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .banner h1 {
+      font-size: 2rem;
+    }
+  
+    .banner p {
+      font-size: 1rem;
+    }
+  }
