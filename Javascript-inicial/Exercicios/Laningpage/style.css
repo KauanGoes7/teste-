@@ -122,9 +122,19 @@ section {
 #s3 {
   background-color: #a50044; /* Vermelho do Barcelona */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
   padding: 40px;
+}
+
+#s3 h2 {
+  font-size: 2rem; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: #ffffff;
+  text-align: center; /* Centraliza o texto */
+  font-family: "Sigmar", serif; /* Fonte personalizada */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
 }
 
 .wrap-acc {
@@ -167,92 +177,97 @@ section {
   text-decoration: underline;
 }
 
-/* Seção 4 - Contato */
+/* Seção 4 - Títulos do Barcelona */
 #s4 {
-  background-color: yellow; /* Azul do Barcelona */
+  background-color: #004d98; /* Azul do Barcelona */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px; /* Padding reduzido */
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
 }
 
 #s4 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: black;
+  font-size: 2rem; /* Título um pouco menor */
+  margin-bottom: 20px; /* Espaçamento menor */
+  color: #ffffff;
+  text-align: center;
+  font-family: "Sigmar", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.formulario {
+.cards-titulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Espaçamento menor entre os cards */
+  justify-content: center;
+  width: 100%;
+  max-width: 900px; /* Largura máxima reduzida */
+}
+
+.cartao {
   background-color: #a50044; /* Vermelho do Barcelona */
-  padding: 20px;
+  width: 200px; /* Cards menores */
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(237, 233, 233, 0.3);
-  width: 100%;
-  max-width: 400px;
+  padding: 10px; /* Padding reduzido */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.formulario label {
-  font-size: 1rem;
+.cartao:hover {
+  transform: translateY(-5px); /* Efeito de hover mais suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.wrap-img-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px; /* Espaçamento menor */
+}
+
+.wrap-img-card img {
+  width: 70px; /* Imagem menor */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff; /* Borda mais fina */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrap-info-card h3 {
+  font-size: 1.2rem; /* Título menor */
+  margin-bottom: 8px; /* Espaçamento menor */
   color: #ffffff;
-  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Sigmar", serif;
 }
 
-.formulario input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
-  background-color: #004d98; /* Azul do Barcelona */
-  color: #ffffff;
-}
-
-.formulario button {
-  width: 100%;
-  padding: 10px;
-  background-color: #004d98; /* Azul do Barcelona */
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.formulario button:hover {
-  background-color: #ffffff;
-  color: #004d98; /* Azul do Barcelona */
+.wrap-info-card p {
+  font-size: 0.8rem; /* Texto menor */
+  color: #f0f0f0;
+  text-align: center;
+  line-height: 1.4; /* Espaçamento entre linhas menor */
 }
 
 /* Footer */
 footer {
-  background-color: black; /* Vermelho do Barcelona */
-  padding: 20px;
+  background-color: black; /* Fundo preto */
+  padding: 30px 20px; /* Aumentei o padding para dar mais destaque */
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 30px; /* Espaçamento maior entre os ícones */
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
 }
 
-footer img {
-  width: 30px;
-  height: 30px;
+footer a img {
+  width: 40px; /* Ícones maiores */
+  height: 40px;
+  transition: transform 0.3s ease; /* Efeito de hover suave */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .title-name {
-    font-size: 2rem;
-  }
-
-  #s1 p {
-    font-size: 1rem;
-  }
-
-  .cartao {
-    width: 100%;
-  }
-
-  .wrap-acc {
-    width: 100%;
-  }
+footer a img:hover {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
