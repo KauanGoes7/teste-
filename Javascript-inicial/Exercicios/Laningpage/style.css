@@ -10,6 +10,20 @@ body {
   color: #ffffff;
 }
 
+.navbar.bg-warning {
+  background-color: #ffcc00 !important;
+  font-weight:bold ; /* Amarelo personalizado */
+}
+/* Estilo para o link "Redes Sociais" no menu */
+.navbar-nav .nav-link[href="#footer"] {
+  color: #004d98; /* Azul do Barcelona */
+  font-weight: bold; /* Texto em negrito */
+}
+
+.navbar-nav .nav-link[href="#footer"]:hover {
+  color: #a50044; /* Vermelho do Barcelona ao passar o mouse */
+}
+
 .img-logo {
   width: 50px;
   height: auto;
@@ -24,6 +38,8 @@ section {
 }
 
 /* Seção 1 - Perfil */
+/* Seção 1 - Abertura */
+/* Seção 1 - Abertura */
 #s1 {
   background-color: #a50044; /* Vermelho do Barcelona */
   display: flex;
@@ -32,6 +48,7 @@ section {
   gap: 40px;
   flex-wrap: wrap;
   padding: 40px;
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
 }
 
 .s1-left {
@@ -52,6 +69,16 @@ section {
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  animation: float 3s ease-in-out infinite; /* Efeito de flutuação */
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
 }
 
 .img-s1 {
@@ -62,33 +89,60 @@ section {
 
 .title-name {
   font-family: "Sigmar", serif;
-  font-size: 3rem;
+  font-size: 4rem; /* Título maior */
   margin-bottom: 20px;
   color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
 }
 
 #s1 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Texto um pouco maior */
   line-height: 1.6;
   color: #f0f0f0;
+  margin-bottom: 30px; /* Espaçamento maior abaixo do texto */
 }
-
+/* Seção 2 - Ídolos */
 /* Seção 2 - Ídolos */
 #s2 {
   background-color: #004d98; /* Azul do Barcelona */
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
   padding: 40px;
+  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+}
+
+#s2 h2 {
+  font-size: 2rem; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  color: #ffffff;
+  text-align: center; /* Centraliza o texto */
+  font-family: "Sigmar", serif; /* Fonte personalizada */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+
+.cards-ídolos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Largura máxima */
 }
 
 .cartao {
   background-color: #a50044; /* Vermelho do Barcelona */
-  width: 300px;
+  width: 300px; /* Largura dos cards */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+  transform: translateY(-5px); /* Efeito de hover mais suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .wrap-img-card {
@@ -103,6 +157,8 @@ section {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid #ffffff; /* Borda branca */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .wrap-info-card h3 {
@@ -110,12 +166,14 @@ section {
   margin-bottom: 10px;
   color: #ffffff;
   text-align: center;
+  font-family: "Sigmar", serif; /* Fonte personalizada */
 }
 
 .wrap-info-card p {
   font-size: 1rem;
   color: #f0f0f0;
   text-align: center;
+  line-height: 1.6;
 }
 
 /* Seção 3 - Jogos Históricos */
@@ -149,7 +207,7 @@ section {
   margin-bottom: 10px;
 }
 
-.accordion-button {
+.accordion-button { 
   background-color: black !important; /* Vermelho do Barcelona */
   color: #ffffff !important;
   font-size: 1.2rem;
@@ -254,12 +312,28 @@ section {
 /* Footer */
 footer {
   background-color: black; /* Fundo preto */
-  padding: 30px 20px; /* Aumentei o padding para dar mais destaque */
+  padding: 20px; /* Padding reduzido para manter o layout original */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px; /* Espaçamento maior entre os ícones */
+  justify-content: space-between; /* Título à esquerda, ícones à direita */
+  align-items: center; /* Centraliza verticalmente */
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+  position: relative; /* Para centralizar os ícones */
+}
+
+footer h2 {
+  font-size: 1.2rem; /* Tamanho menor para o título */
+  color: #ffffff;
+  font-family: "Sigmar", serif; /* Fonte personalizada */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  margin-left: 20px; /* Margem à esquerda para o título */
+}
+
+footer .social-icons {
+  position: absolute; /* Posicionamento absoluto para centralizar */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a centralização */
+  display: flex;
+  gap: 20px; /* Espaçamento entre os ícones */
 }
 
 footer a img {
