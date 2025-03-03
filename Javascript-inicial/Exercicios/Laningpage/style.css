@@ -6,22 +6,22 @@
 }
 
 body {
-  background-color: #004d98; /* Azul do Barcelona */
+  background-color: #004d98; 
   color: #ffffff;
 }
 
 .navbar.bg-warning {
   background-color: #ffcc00 !important;
-  font-weight:bold ; /* Amarelo personalizado */
+  font-weight:bold ; 
 }
-/* Estilo para o link "Redes Sociais" no menu */
+
 .navbar-nav .nav-link[href="#footer"] {
-  color: #004d98; /* Azul do Barcelona */
-  font-weight: bold; /* Texto em negrito */
+  color: #004d98; 
+  font-weight: bold; 
 }
 
 .navbar-nav .nav-link[href="#footer"]:hover {
-  color: #a50044; /* Vermelho do Barcelona ao passar o mouse */
+  color: #a50044;
 }
 
 .img-logo {
@@ -37,18 +37,16 @@ section {
   justify-content: center;
 }
 
-/* Seção 1 - Perfil */
-/* Seção 1 - Abertura */
-/* Seção 1 - Abertura */
+
 #s1 {
-  background-color: #a50044; /* Vermelho do Barcelona */
+  background-color: #a50044; 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
   padding: 40px;
-  min-height: 100vh; /* Garante que a seção ocupe a altura total da tela */
+  min-height: 100vh; 
 }
 
 .s1-left {
@@ -69,7 +67,7 @@ section {
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  animation: float 3s ease-in-out infinite; /* Efeito de flutuação */
+  animation: float 3s ease-in-out infinite; 
 }
 
 @keyframes float {
@@ -92,7 +90,7 @@ section {
   font-size: 4rem; /* Título maior */
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 #s1 p {
@@ -187,10 +185,10 @@ section {
 }
 
 #s3 h2 {
-  font-size: 2rem; /* Tamanho do título */
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-size: 2rem; 
+  margin-bottom: 20px; 
   color: #ffffff;
-  text-align: center; /* Centraliza o texto */
+  text-align: center; /* Cen
   font-family: "Sigmar", serif; /* Fonte personalizada */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
 }
@@ -330,18 +328,18 @@ footer h2 {
 
 footer .social-icons {
   position: absolute; /* Posicionamento absoluto para centralizar */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a centralização */
+  left: 50%; 
+  transform: translateX(-50%); 
   display: flex;
-  gap: 20px; /* Espaçamento entre os ícones */
+  gap: 20px; 
 }
 
 footer a img {
-  width: 40px; /* Ícones maiores */
+  width: 40px;
   height: 40px;
-  transition: transform 0.3s ease; /* Efeito de hover suave */
+  transition: transform 0.3s ease; 
 }
 
 footer a img:hover {
-  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+  transform: scale(1.2); 
 }
